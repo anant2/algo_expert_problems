@@ -3,7 +3,7 @@ package binarysearch;
 /*Find a number in the array which is equal to or the least among the greater numbers than the array
  * {2,4,6,7,9,10} suppose target element to be found is 5 . The answer would be 6 here.
 */
-public class CeilingExample {
+public class CeilingFloorExample {
 
     public static void main(String[] args) {
         int arr [] = {2,5,7,9,14,17,25,29,40};
