@@ -1,5 +1,7 @@
 package easy.sortedSquaredArray;
 
+import java.util.Arrays;
+
 public class Solution1 {
 
     public static void main(String[] args) {
@@ -18,8 +20,6 @@ public class Solution1 {
                 end--;
             }
         }
-        for (int i : result) {
-            System.out.print(i+" ");
-        }
+        System.out.println(Arrays.toString(result));
     }
 }

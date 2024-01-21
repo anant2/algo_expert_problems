@@ -1,4 +1,4 @@
-package easy;
+package easy.cyclicsort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
