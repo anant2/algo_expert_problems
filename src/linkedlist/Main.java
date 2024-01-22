@@ -11,7 +11,7 @@ public class Main {
         //ll.insertFirst(1);
         ll.insertLast(8);
         ll.insertLast(9);
-        ll.display();
+        //ll.display();
         ll.deleteIndex(3);
         //ll.deleteLast();
         //ll.deleteLast();
@@ -20,7 +20,14 @@ public class Main {
         //ll.deleteFirst();
         //ll.deleteFirst();
         //ll.deleteFirst();
-        ll.display();
+        //ll.display();
+
+        DoublyLinkedList dl = new DoublyLinkedList();
+        //dl.addFirst(12);
+        //dl.addFirst(13);
+        dl.addLast(10);
+        dl.addLast(20);
+        dl.display();
     }
 
 }
