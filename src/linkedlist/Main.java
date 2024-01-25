@@ -23,10 +23,11 @@ public class Main {
         //ll.display();
 
         DoublyLinkedList dl = new DoublyLinkedList();
-        //dl.addFirst(12);
-        //dl.addFirst(13);
+        dl.addFirst(12);
+        dl.addFirst(13);
         dl.addLast(10);
         dl.addLast(20);
+        dl.addAfter(10,15);
         dl.display();
     }
 
