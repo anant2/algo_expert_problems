@@ -3,8 +3,8 @@ package recursion;
 public class TrianglePattern {
 
     public static void main(String[] args) {
-        //printInverseTriangle(4, 0);
-        printNormalTriangle(4,0);
+        printInverseTriangle(4, 0);
+        //printNormalTriangle(4,0);
     }
 
     private static void printInverseTriangle(int r, int c) {
