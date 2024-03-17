@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedlist.singly;
 //https://leetcode.com/problems/happy-number/
 public class HappyNumber {
 

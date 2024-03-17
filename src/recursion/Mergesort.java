@@ -6,8 +6,14 @@ public class Mergesort {
 
     public static void main(String[] args) {
         int arr[] = {5, 4, 3, 2, 1};
+        mergeSortInPlace(arr, 0 , arr.length - 1);
         int [] result = mergeSort(arr);
         System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(arr));
+    }
+
+    private static void mergeSortInPlace(int[] arr, int start, int end) {
+
     }
 
     private static int[] mergeSort(int[] arr) {

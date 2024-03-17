@@ -1,31 +1,19 @@
-package linkedlist;
+package linkedlist.singly;
 
 
-public class SinglyListExample {
+public class SinglyLinkedList {
 
-    static class Node {
-        int data;
-        Node next;
 
-        public Node(int data) {
-            this.data = data;
-        }
-
-        public Node(int data, Node next) {
-            this.data = data;
-            this.next = next;
-        }
-    }
 
     Node head;
     Node tail;
     int size;
 
-    public SinglyListExample() {
+    public SinglyLinkedList() {
         this.size = 0;
     }
 
-    public SinglyListExample(int data) {
+    public SinglyLinkedList(int data) {
         Node node = new Node(data);
         node.next = null;
 
@@ -162,6 +150,16 @@ public class SinglyListExample {
         System.out.println();
     }
 
+    public void display(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.print("null");
+        System.out.println();
+    }
+
     public boolean findLoop(Node head) {
         Node fast = head;
         Node slow = head;
@@ -214,11 +212,11 @@ public class SinglyListExample {
     }
 
     // merge two list
-    public SinglyListExample mergeTwoList(SinglyListExample list1, SinglyListExample list2) {
+    public Node mergeTwoList(Node head1, Node head2) {
 
-        SinglyListExample newList = new SinglyListExample();
-        Node f = list1.head;
-        Node s = list2.head;
+        SinglyLinkedList newList = new SinglyLinkedList();
+        Node f = head1;
+        Node s = head2;
 
         while (f != null && s != null) {
             if (f.data < s.data) {
@@ -239,12 +237,12 @@ public class SinglyListExample {
             newList.insertLast(s.data);
             s = s.next;
         }
-        return newList;
+        return newList.head;
     }
 
-    public Node findMidNode(SinglyListExample list) {
-        Node slow = list.head;
-        Node fast = list.head;
+    public Node findMidNode(Node head) {
+        Node slow = head;
+        Node fast = head;
 
         while(fast != null && fast.next != null) {
             slow = slow.next;
@@ -254,5 +252,18 @@ public class SinglyListExample {
         return slow;
     }
 
+    public void reverseList(Node node){
+
+        if(node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverseList(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+
+    }
 
 }
