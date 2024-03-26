@@ -22,6 +22,7 @@ public class Main {
 
         SinglyLinkedList list = new SinglyLinkedList();
         //System.out.println(list.findLoop(node1));
+        //System.out.println(list.findLoop2(node1));
         //System.out.println(list.lengthOfTheLoop(node1));
         //System.out.println(list.startOfCycle(node1).data);
 
@@ -46,11 +47,14 @@ public class Main {
 
 
         SinglyLinkedList list3 = new SinglyLinkedList();
-        list3.insertLast(8);
-        list3.insertLast(6);
-        list3.insertLast(3);
         list3.insertLast(1);
-        list3.display();
+        list3.insertLast(2);
+        list3.insertLast(3);
+        list3.insertLast(4);
+        list3.insertLast(5);
+        list3.insertLast(6);
+        list3.insertLast(7);
+        //list3.display();
 //        MergeSinglyLinkedList merge = new MergeSinglyLinkedList();
 //        Node result = merge.mergeSort(list3.head);
 //        list3.display(result);
@@ -63,6 +67,11 @@ public class Main {
         list3.display();
         list3.reverseList(list3.head);
         list3.display();
+        list3.reverseList2(list3.head);
+        list3.display();
+        ReverseList lt = new ReverseList();
+        Node newList = lt.reverseSection(list3.head, 4,6);
+        list3.display(newList);
 
 
     }

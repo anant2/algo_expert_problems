@@ -174,6 +174,18 @@ public class SinglyLinkedList {
         return false;
     }
 
+    public boolean findLoop2(Node head) {
+        Node temp = head.next;
+
+        while (head != null && head.next != null) {
+            temp = temp.next;
+            if (head == temp) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public int lengthOfTheLoop(Node head) {
         Node fast = head;
         Node slow = head;
@@ -263,6 +275,56 @@ public class SinglyLinkedList {
         tail.next = node;
         tail = node;
         tail.next = null;
+
+    }
+
+    public void reverseList2(Node node){
+        Node prev = null;
+        Node current = head;
+        Node next = current.next;
+        while(current != null) {
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next != null) next = next.next;
+        }
+        head = prev;
+    }
+
+    public Node reverseII(Node head, int left, int right) {
+
+        if(left == right) return head;
+
+        Node current = head;
+        Node previous = null;
+
+        for( int i = 0; current != null && i < left - 1; i++) {
+            previous = current;
+            current = current.next;
+        }
+
+        Node lastNode = previous;
+        Node newEnd  = current;
+
+        Node next = current.next;
+        for(int i = 0; current != null && i < right - left + 1; i++) {
+            current.next = previous;
+            previous = current;
+            current = next;
+            if(next != null) next = next.next;
+        }
+
+        if(lastNode != null) {
+            lastNode.next = previous;
+        } else {
+            head = previous;
+        }
+        newEnd.next = current;
+
+        return head;
+
+
+
 
     }
 
