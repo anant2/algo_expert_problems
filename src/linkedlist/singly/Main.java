@@ -52,8 +52,6 @@ public class Main {
         list3.insertLast(3);
         list3.insertLast(4);
         list3.insertLast(5);
-        list3.insertLast(6);
-        list3.insertLast(7);
         //list3.display();
 //        MergeSinglyLinkedList merge = new MergeSinglyLinkedList();
 //        Node result = merge.mergeSort(list3.head);
@@ -63,15 +61,22 @@ public class Main {
         //System.out.println(node.data);
         //System.out.println(list3.size);
 
-        st.bubbleLinkedList(list3);
+        //st.bubbleLinkedList(list3);
         list3.display();
-        list3.reverseList(list3.head);
-        list3.display();
-        list3.reverseList2(list3.head);
-        list3.display();
-        ReverseList lt = new ReverseList();
-        Node newList = lt.reverseSection(list3.head, 4,6);
-        list3.display(newList);
+        ReorderList reorderList = new ReorderList();
+        Node newHead = reorderList.reorder(list3.head);
+        list3.display(newHead);
+//        Palindrome isPalindrome = new Palindrome();
+//        System.out.println(isPalindrome.isPalindrome(list3.head));
+//        list3.display(list3.head);
+//        list3.display();
+//        list3.reverseList(list3.head);
+//        list3.display();
+//        list3.reverseList2(list3.head);
+//        list3.display();
+//        ReverseList lt = new ReverseList();
+//        Node newList = lt.reverseSection(list3.head, 4,6);
+//        list3.display(newList);
 
 
     }
