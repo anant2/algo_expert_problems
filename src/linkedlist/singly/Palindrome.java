@@ -6,7 +6,6 @@ public class Palindrome {
 
     public boolean isPalindrome(Node head) {
         Node mid = findMiddleNode(head);
-        SinglyLinkedList l = new SinglyLinkedList();
         Node secondHead = reverseList(mid);
         Node reReverse = secondHead;
         while(head != null && secondHead != null) {
