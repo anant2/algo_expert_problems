@@ -3,10 +3,11 @@ package recursion;
 public class ReverseNumber {
     static int sum = 0;
     public static void main(String[] args) {
-        //reverse1(1234);
+//        reverse1(1234);
+//    System.out.println(sum);
         int result = reverse2(1234);
-        //System.out.println(result);
-        System.out.println(findPalindrome(1231));
+        System.out.println(result);
+        //System.out.println(findPalindrome(1231));
     }
 
     private static boolean findPalindrome(int n) {
