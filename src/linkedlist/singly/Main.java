@@ -63,9 +63,12 @@ public class Main {
 
         //st.bubbleLinkedList(list3);
         list3.display();
-        ReorderList reorderList = new ReorderList();
-        Node newHead = reorderList.reorder(list3.head);
+        RotateList rotateList = new RotateList();
+        Node newHead = rotateList.rotate(list3.head,2);
         list3.display(newHead);
+        //ReorderList reorderList = new ReorderList();
+        //Node newHead = reorderList.reorder(list3.head);
+        //list3.display(newHead);
 //        Palindrome isPalindrome = new Palindrome();
 //        System.out.println(isPalindrome.isPalindrome(list3.head));
 //        list3.display(list3.head);
